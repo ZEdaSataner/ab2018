@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bck"
+    tools:context="com.ab2018.basvuruuygulamasi.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ab_2"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Akademik Bilişim 2018 Başvuru"
+        android:textSize="22sp"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/isimET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Soyad"/>
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/bdayET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Doğum Tarihi"/>
+    <Spinner
+        android:id="@+id/sehirSpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/sehirler"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/kadinRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kadın"
+            android:checked="true"
+            android:buttonTint="@color/colorBlue"/>
+
+        <RadioButton
+            android:id="@+id/erkekRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erkek"
+            android:buttonTint="@color/colorBlue"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkBx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daha önce Akademik Bilişim'e katıldınız mı?"
+        android:layout_gravity="center"
+        android:buttonTint="@color/colorBlue"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Başvur"
+        android:background="@color/colorBlue"
+        android:textColor="#FFF"
+        android:layout_alignParentBottom="true"
+        android:onClick="basvuru"/>
+
+    </RelativeLayout>
+</LinearLayout>
